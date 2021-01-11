@@ -1,0 +1,30 @@
+{
+  "name": "amotherspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx @11ty/eleventy --serve --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imonthercks/amotherspace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imonthercks/amotherspace/issues"
+  },
+  "homepage": "https://github.com/imonthercks/amotherspace#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy-navigation": "^0.1.6",
+    "clean-css": "^4.2.3",
+    "html-minifier": "^4.0.0",
+    "luxon": "^1.25.0",
+    "markdown-it-anchor": "^7.0.0",
+    "uglify-es": "^3.3.9"
+  }
+}

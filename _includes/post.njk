@@ -1,0 +1,12 @@
+{% set nextPost = collections.posts | getNextCollectionItem(page) %}
+{% set prevPost = collections.posts | getPreviousCollectionItem(page) %}
+<html>
+<body>
+  <div>
+  <a href="{{prevPost.url}}">&lt;&lt;&nbsp;{{prevPost.data.title}}</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{nextPost.url}}">{{nextPost.data.title}}&nbsp;&gt;&gt;</a>
+  </div>
+  <div>
+    {{ content | safe }}
+  </div>
+</body>
+</html>
