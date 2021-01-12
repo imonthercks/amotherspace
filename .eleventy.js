@@ -92,16 +92,21 @@ module.exports = function(eleventyConfig) {
   /* Markdown Plugins */
   let markdownIt = require("markdown-it");
   let markdownItAnchor = require("markdown-it-anchor");
+  let markdownItReplaceLink = require("markdown-it-replace-link")
   let options = {
     html: true,
     breaks: true,
-    linkify: true
+    linkify: true,
+    replaceLink: function (link, env) {
+      return link.replace(/%23/g, "_").replace(/%3F/g, "_");
+  }
   };
   let opts = {
     permalink: false
   };
 
   eleventyConfig.setLibrary("md", markdownIt(options)
+    .use(markdownItReplaceLink)
     .use(markdownItAnchor, opts)
   );
 
